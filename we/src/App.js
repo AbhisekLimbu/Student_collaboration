@@ -1,26 +1,23 @@
 import React from 'react';
-import Login from './Components/login.js';
-import Register from './Components/register.js';
-import Profile from './Components/Profile.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Fix import
+import Login from './Components/login';
+import Register from './Components/register';
+import Profile from './Components/Profile';
+import Home from './Components/Home';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <h1>Welcome to Your Student Community</h1>
-        <p>Connect with students who share your interests!</p>
-      </header>
-      
-      <Login />
-      <Register />
-      <Profile />
-
-      
-
-       
+      <Router> {/* Fix opening tag */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </Router> {/* Fix closing tag */}
     </div>
   );
 }
