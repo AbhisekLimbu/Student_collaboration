@@ -1,5 +1,7 @@
 import React from 'react';
-import Login from './componets/login.js'
+import Login from './Components/login.js';
+import Register from './Components/register.js';
+
 
 import './App.css';
 
@@ -11,6 +13,7 @@ function App() {
         <h1>Welcome to Your Student Community</h1>
         <p>Connect with students who share your interests!</p>
       </header>
+      
       <Login />
       <Register />
 
