@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Components/login.js';
 import Register from './Components/register.js';
-
+import Profile from './Components/Profile.js';
 
 import './App.css';
 
@@ -16,6 +16,7 @@ function App() {
       
       <Login />
       <Register />
+      <Profile />
 
       
 
