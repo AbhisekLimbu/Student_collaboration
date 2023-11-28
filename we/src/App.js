@@ -3,21 +3,21 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Fi
 import Login from './Components/login';
 import Register from './Components/register';
 import Profile from './Components/Profile';
-import Home from './Components/Home';
+
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <Router> {/* Fix opening tag */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </Router> {/* Fix closing tag */}
+      </Routes>
+      </Router>
     </div>
   );
 }
